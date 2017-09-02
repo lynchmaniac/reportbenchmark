@@ -1,0 +1,25 @@
+{
+  "name": "reportbenchmark",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist --debug",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "lynchmaniac",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "fs": "0.0.1-security",
+    "q": "^1.5.0"
+  },
+  "babel": {
+    "presets": ["es2015"],
+    "sourceMaps": true,
+    "retainLines": true
+  }
+}
