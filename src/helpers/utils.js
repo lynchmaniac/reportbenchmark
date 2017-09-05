@@ -21,45 +21,20 @@ var type_bench = {
   RM : "rm",
   NORMAL: "normal"
 }
-export const bahbah = (clean_benchmark, cache_clear, rm, normal, current_bench) => {
-  clean_benchmark.toString().split('\n').forEach(function (line) { 
-    if (line.indexOf('cache clear rm') != -1) {
-      current_bench = type_bench.CACHE_CLEAR;
-    } else if (line.indexOf('rm occurs') != -1) {
-      current_bench = type_bench.RM;
-    } else if (line.indexOf(' occurs') != -1) {
-      current_bench = type_bench.NORMAL;
-    } else if (line.indexOf('real') != -1) {
-      if (current_bench === type_bench.CACHE_CLEAR) {
-        cache_clear.push(convertTime(line));
-      } else if (current_bench === type_bench.RM) {
-        rm.push(convertTime(line));
-      } else if (current_bench === type_bench.NORMAL) {
-        normal.push(convertTime(line));
-      }
-    }
-  });
+
+
+export const get_average = (tab) => {
+  let average = 0;
+  if (tab.length == 0) {
+    return 0;
+  }
+  for (var l in tab) {
+    average += tab[l];
+  }
+  return parseInt(average) / tab.length;
+
 }
 
-
-export const shallowCopy = ( original ) =>  
-{
-    // First create an empty object with
-    // same prototype of our original source
-    var clone = Object.create( Object.getPrototypeOf( original ) ) ;
-
-    var i , keys = Object.getOwnPropertyNames( original ) ;
-
-    for ( i = 0 ; i < keys.length ; i ++ )
-    {
-        // copy each property into the clone
-        Object.defineProperty( clone , keys[ i ] ,
-            Object.getOwnPropertyDescriptor( original , keys[ i ] )
-        ) ;
-    }
-
-    return clone ;
-}
 
 /**
  * Sauvegarde le tweet courant.
@@ -114,7 +89,7 @@ export const convertTime = (time) => {
     return time_convert;
 };
 
-export const convertTime2 = (time_in_ms) => {
+export const convertHumanTime = (time_in_ms) => {
   // 106864
     let time_convert;
     let time_in_s = time_in_ms / 1000;
