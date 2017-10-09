@@ -1,0 +1,91 @@
+echo ""
+echo "##############################"
+echo "##         YARN [FWK]     ##"
+echo "##############################"
+echo ""
+
+cd ../yarn[fwk]
+echo Lancement de la construction yarn pour un projet [Fwk]
+yarn -v >> ../results/benchmarkYarn[Fwk].txt
+index=1
+# cache				
+# lockfile		
+# node_modules	
+while [ "$index" != 6 ]
+do
+	echo "Je fais yarn install pour [fwk] avec cache clear et rm: index "$index
+	echo "cache 		NON"
+	echo "lockfile  	NON"
+	echo "node_modules	NON"
+	rm -f yarn.lock
+	rm -rf node_modules
+	yarn cache clean
+	(echo '' && echo 'construction yarn [fwk] cache no - lockfile no - node_modules no - occurs '$index && time yarn install --silent) &>> ../results/benchmarkYarn[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		X
+# node_modules	X	
+while [ "$index" != 6 ]
+do
+	echo "Je fais yarn install pour [fwk] : index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	OUI"
+	echo "node_modules	OUI"
+	(echo '' && echo 'construction yarn [fwk] cache yes - lockfile yes - node_modules yes - occurs '$index && time yarn install --silent) &>> ../results/benchmarkYarn[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		X
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais yarn install pour [fwk] avec rm: index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	OUI"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	(echo '' && echo 'construction yarn [fwk] cache yes - lockfile yes - node_modules no - occurs '$index && time yarn install --silent) &>> ../results/benchmarkYarn[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais yarn install pour [fwk] avec rm: index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	NON"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	rm -f yarn.lock
+	(echo '' && echo 'construction yarn [fwk] cache yes - lockfile no - node_modules no - occurs '$index && time yarn install --silent) &>> ../results/benchmarkYarn[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache				
+# lockfile		X
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais yarn install pour [fwk] avec rm: index "$index
+	echo "cache 		NON"
+	echo "lockfile  	OUI"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	yarn cache clean
+	(echo '' && echo 'construction yarn [fwk] cache no - lockfile yes - node_modules no - occurs '$index && time yarn install --silent) &>> ../results/benchmarkYarn[Fwk].txt
+
+	index=$(($index+1))
+done

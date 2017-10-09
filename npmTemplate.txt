@@ -1,0 +1,91 @@
+echo ""
+echo "##############################"
+echo "##         NPM [FWK]      ##"
+echo "##############################"
+echo ""
+
+cd ../npm[fwk]
+echo Lancement de la construction npm pour un projet [Fwk]
+npm -v >> ../results/benchmarkNpm[Fwk].txt
+index=1
+# cache				
+# lockfile		
+# node_modules	
+while [ "$index" != 6 ]
+do
+	echo "Je fais npm install pour [fwk] avec cache clear et rm: index "$index
+	echo "cache 		NON"
+	echo "lockfile  	NON"
+	echo "node_modules	NON"
+	rm -f package-lock.json
+	rm -rf node_modules
+	npm cache clear --force
+	(echo '' && echo 'construction npm [fwk] cache no - lockfile no - node_modules no - occurs '$index && time npm install --silent) &>> ../results/benchmarkNpm[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		X
+# node_modules	X	
+while [ "$index" != 6 ]
+do
+	echo "Je fais npm install pour [fwk] : index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	OUI"
+	echo "node_modules	OUI"
+	(echo '' && echo 'construction npm [fwk] cache yes - lockfile yes - node_modules yes - occurs '$index && time npm install --silent) &>> ../results/benchmarkNpm[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		X
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais npm install pour [fwk] avec rm: index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	OUI"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	(echo '' && echo 'construction npm [fwk] cache yes - lockfile yes - node_modules no - occurs '$index && time npm install --silent) &>> ../results/benchmarkNpm[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais npm install pour [fwk] avec rm: index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	NON"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	rm -f package-lock.json
+	(echo '' && echo 'construction npm [fwk] cache yes - lockfile no - node_modules no - occurs '$index && time npm install --silent) &>> ../results/benchmarkNpm[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache				
+# lockfile		X
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais npm install pour [fwk] avec rm: index "$index
+	echo "cache 		NON"
+	echo "lockfile  	OUI"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	npm cache clear --force
+	(echo '' && echo 'construction npm [fwk] cache no - lockfile yes - node_modules no - occurs '$index && time npm install --silent) &>> ../results/benchmarkNpm[Fwk].txt
+
+	index=$(($index+1))
+done

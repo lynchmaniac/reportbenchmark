@@ -1,0 +1,91 @@
+echo ""
+echo "##############################"
+echo "##        PNPM [FWK]      ##"
+echo "##############################"
+echo ""
+
+cd ../pnpm[fwk]
+echo Lancement de la construction pnpm pour un projet [Fwk]
+pnpm -v >> ../results/benchmarkPnpm[Fwk].txt
+index=1
+# cache				
+# lockfile		
+# node_modules	
+while [ "$index" != 6 ]
+do
+	echo "Je fais pnpm install pour [fwk] avec cache clear et rm: index "$index
+	echo "cache 		NON"
+	echo "lockfile  	NON"
+	echo "node_modules	NON"
+	rm -f shrinkwrap.yaml
+	rm -rf node_modules
+	pnpm cache clear --force
+	(echo '' && echo 'construction pnpm [fwk] cache no - lockfile no - node_modules no - occurs '$index && time pnpm install --silent) &>> ../results/benchmarkPnpm[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		X
+# node_modules	X	
+while [ "$index" != 6 ]
+do
+	echo "Je fais pnpm install pour [fwk] : index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	OUI"
+	echo "node_modules	OUI"
+	(echo '' && echo 'construction pnpm [fwk] cache yes - lockfile yes - node_modules yes - occurs '$index && time pnpm install --silent) &>> ../results/benchmarkPnpm[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		X
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais pnpm install pour [fwk] avec rm: index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	OUI"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	(echo '' && echo 'construction pnpm [fwk] cache yes - lockfile yes - node_modules no - occurs '$index && time pnpm install --silent) &>> ../results/benchmarkPnpm[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache			X	
+# lockfile		
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais pnpm install pour [fwk] avec rm: index "$index
+	echo "cache 		OUI"
+	echo "lockfile  	NON"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	rm -f shrinkwrap.yaml
+	(echo '' && echo 'construction pnpm [fwk] cache yes - lockfile no - node_modules no - occurs '$index && time pnpm install --silent) &>> ../results/benchmarkPnpm[Fwk].txt
+
+	index=$(($index+1))
+done
+
+index=1
+# cache				
+# lockfile		X
+# node_modules		
+while [ "$index" != 6 ]
+do
+	echo "Je fais pnpm install pour [fwk] avec rm: index "$index
+	echo "cache 		NON"
+	echo "lockfile  	OUI"
+	echo "node_modules	NON"
+	rm -rf node_modules
+	pnpm cache clear --force
+	(echo '' && echo 'construction pnpm [fwk] cache no - lockfile yes - node_modules no - occurs '$index && time pnpm install --silent) &>> ../results/benchmarkPnpm[Fwk].txt
+
+	index=$(($index+1))
+done

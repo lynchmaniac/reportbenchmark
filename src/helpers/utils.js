@@ -42,7 +42,9 @@ export const get_average = (tab) => {
  * 2 tweets identique.
  */
 export const readBenchmark = (gest_paquet, framework) => {
-    let benchFile = fs.readFileSync('../results/benchmark' + gest_paquet.toCamelCase() + framework.toCamelCase() + '.txt', 'utf-8');
+    console.log('lecture du fichier benchmark ', gest_paquet.toCamelCase(), framework.toCamelCase());
+    
+    let benchFile = fs.readFileSync('../pnpm.devfest/results/benchmark' + gest_paquet.toCamelCase() + framework.toCamelCase() + '.txt', 'utf-8');
     return benchFile;
 };
 
@@ -76,6 +78,8 @@ export const categorizeLine = (line) => {
 
 export const convertTime = (time) => {
   // time real\tm[0-9]*.[0-9]3s
+  //console.log("**** ", time);
+  
     let time_convert;
     if (time.indexOf("real") != -1) {
       time = time.substring(5, time.length);
