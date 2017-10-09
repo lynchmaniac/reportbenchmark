@@ -85,8 +85,8 @@ export const convertTime = (time) => {
       time = time.substring(5, time.length);
     }
     let minutes = time.split('m')[0];
-    let secondes = time.split('m')[1].split('.')[0];
-    let millisecondes = time.split('m')[1].split('.')[1].split('s')[0]; 
+    let secondes = time.split('m')[1].split(',')[0];
+    let millisecondes = time.split('m')[1].split(',')[1].split('s')[0]; 
     time_convert = (minutes * 60) + parseInt(secondes, 10); // en s
     time_convert = time_convert * 1000 + parseInt(millisecondes, 10);
 
