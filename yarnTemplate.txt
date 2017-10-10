@@ -89,3 +89,6 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f yarn.lock
+rm -rf node_modules
