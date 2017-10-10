@@ -17,7 +17,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour angular avec cache clear et rm: index "$index
+	echo "construction npm angular cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -35,7 +35,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour angular : index "$index
+	echo "construction npm angular cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -50,7 +50,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour angular avec rm: index "$index
+	echo "construction npm angular cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -66,7 +66,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour angular avec rm: index "$index
+	echo "construction npm angular cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -83,7 +83,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour angular avec rm: index "$index
+	echo "construction npm angular cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -93,6 +93,11 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f package-lock.json
+rm -rf node_modules
+
+
 
 
 echo ""
@@ -110,7 +115,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour react avec cache clear et rm: index "$index
+	echo "construction npm react cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -128,7 +133,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour react : index "$index
+	echo "construction npm react cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -143,7 +148,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour react avec rm: index "$index
+	echo "construction npm react cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -159,7 +164,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour react avec rm: index "$index
+	echo "construction npm react cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -176,7 +181,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour react avec rm: index "$index
+	echo "construction npm react cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -186,6 +191,11 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f package-lock.json
+rm -rf node_modules
+
+
 
 
 echo ""
@@ -203,7 +213,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour ember avec cache clear et rm: index "$index
+	echo "construction npm ember cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -221,7 +231,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour ember : index "$index
+	echo "construction npm ember cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -236,7 +246,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour ember avec rm: index "$index
+	echo "construction npm ember cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -252,7 +262,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour ember avec rm: index "$index
+	echo "construction npm ember cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -269,7 +279,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour ember avec rm: index "$index
+	echo "construction npm ember cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -279,6 +289,11 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f package-lock.json
+rm -rf node_modules
+
+
 
 
 echo ""
@@ -296,7 +311,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour alot avec cache clear et rm: index "$index
+	echo "construction npm alot cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -314,7 +329,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour alot : index "$index
+	echo "construction npm alot cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -329,7 +344,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour alot avec rm: index "$index
+	echo "construction npm alot cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -345,7 +360,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour alot avec rm: index "$index
+	echo "construction npm alot cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -362,7 +377,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour alot avec rm: index "$index
+	echo "construction npm alot cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -372,6 +387,11 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f package-lock.json
+rm -rf node_modules
+
+
 
 
 echo ""
@@ -389,7 +409,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour medium avec cache clear et rm: index "$index
+	echo "construction npm medium cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -407,7 +427,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour medium : index "$index
+	echo "construction npm medium cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -422,7 +442,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour medium avec rm: index "$index
+	echo "construction npm medium cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -438,7 +458,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour medium avec rm: index "$index
+	echo "construction npm medium cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -455,7 +475,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour medium avec rm: index "$index
+	echo "construction npm medium cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -465,6 +485,11 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f package-lock.json
+rm -rf node_modules
+
+
 
 
 echo ""
@@ -482,7 +507,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour angular avec cache clear et rm: index "$index
+	echo "construction pnpm angular cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -500,7 +525,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour angular : index "$index
+	echo "construction pnpm angular cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -515,7 +540,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour angular avec rm: index "$index
+	echo "construction pnpm angular cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -531,7 +556,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour angular avec rm: index "$index
+	echo "construction pnpm angular cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -548,7 +573,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour angular avec rm: index "$index
+	echo "construction pnpm angular cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -558,6 +583,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f shrinkwrap.yaml
+rm -rf node_modules
 
 
 echo ""
@@ -575,7 +603,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour react avec cache clear et rm: index "$index
+	echo "construction pnpm react cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -593,7 +621,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour react : index "$index
+	echo "construction pnpm react cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -608,7 +636,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour react avec rm: index "$index
+	echo "construction pnpm react cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -624,7 +652,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour react avec rm: index "$index
+	echo "construction pnpm react cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -641,7 +669,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour react avec rm: index "$index
+	echo "construction pnpm react cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -651,6 +679,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f shrinkwrap.yaml
+rm -rf node_modules
 
 
 echo ""
@@ -668,7 +699,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour ember avec cache clear et rm: index "$index
+	echo "construction pnpm ember cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -686,7 +717,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour ember : index "$index
+	echo "construction pnpm ember cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -701,7 +732,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour ember avec rm: index "$index
+	echo "construction pnpm ember cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -717,7 +748,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour ember avec rm: index "$index
+	echo "construction pnpm ember cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -734,7 +765,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour ember avec rm: index "$index
+	echo "construction pnpm ember cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -744,6 +775,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f shrinkwrap.yaml
+rm -rf node_modules
 
 
 echo ""
@@ -761,7 +795,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour alot avec cache clear et rm: index "$index
+	echo "construction pnpm alot cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -779,7 +813,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour alot : index "$index
+	echo "construction pnpm alot cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -794,7 +828,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour alot avec rm: index "$index
+	echo "construction pnpm alot cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -810,7 +844,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour alot avec rm: index "$index
+	echo "construction pnpm alot cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -827,7 +861,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour alot avec rm: index "$index
+	echo "construction pnpm alot cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -837,6 +871,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f shrinkwrap.yaml
+rm -rf node_modules
 
 
 echo ""
@@ -854,7 +891,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour medium avec cache clear et rm: index "$index
+	echo "construction pnpm medium cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -872,7 +909,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour medium : index "$index
+	echo "construction pnpm medium cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -887,7 +924,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour medium avec rm: index "$index
+	echo "construction pnpm medium cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -903,7 +940,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour medium avec rm: index "$index
+	echo "construction pnpm medium cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -920,7 +957,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais pnpm install pour medium avec rm: index "$index
+	echo "construction pnpm medium cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -930,6 +967,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f shrinkwrap.yaml
+rm -rf node_modules
 
 
 echo ""
@@ -947,7 +987,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour angular avec cache clear et rm: index "$index
+	echo "construction yarn angular cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -965,7 +1005,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour angular : index "$index
+	echo "construction yarn angular cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -980,7 +1020,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour angular avec rm: index "$index
+	echo "construction yarn angular cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -996,7 +1036,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour angular avec rm: index "$index
+	echo "construction yarn angular cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1013,7 +1053,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour angular avec rm: index "$index
+	echo "construction yarn angular cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1023,6 +1063,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f yarn.lock
+rm -rf node_modules
 
 
 echo ""
@@ -1040,7 +1083,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour react avec cache clear et rm: index "$index
+	echo "construction yarn react cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1058,7 +1101,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour react : index "$index
+	echo "construction yarn react cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -1073,7 +1116,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour react avec rm: index "$index
+	echo "construction yarn react cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1089,7 +1132,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour react avec rm: index "$index
+	echo "construction yarn react cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1106,7 +1149,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour react avec rm: index "$index
+	echo "construction yarn react cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1116,6 +1159,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f yarn.lock
+rm -rf node_modules
 
 
 echo ""
@@ -1133,7 +1179,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour ember avec cache clear et rm: index "$index
+	echo "construction yarn ember cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1151,7 +1197,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour ember : index "$index
+	echo "construction yarn ember cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -1166,7 +1212,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour ember avec rm: index "$index
+	echo "construction yarn ember cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1182,7 +1228,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour ember avec rm: index "$index
+	echo "construction yarn ember cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1199,7 +1245,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour ember avec rm: index "$index
+	echo "construction yarn ember cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1209,6 +1255,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f yarn.lock
+rm -rf node_modules
 
 
 echo ""
@@ -1226,7 +1275,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour alot avec cache clear et rm: index "$index
+	echo "construction yarn alot cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1244,7 +1293,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour alot : index "$index
+	echo "construction yarn alot cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -1259,7 +1308,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour alot avec rm: index "$index
+	echo "construction yarn alot cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1275,7 +1324,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour alot avec rm: index "$index
+	echo "construction yarn alot cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1292,7 +1341,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour alot avec rm: index "$index
+	echo "construction yarn alot cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1302,6 +1351,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f yarn.lock
+rm -rf node_modules
 
 
 echo ""
@@ -1319,7 +1371,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour medium avec cache clear et rm: index "$index
+	echo "construction yarn medium cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1337,7 +1389,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour medium : index "$index
+	echo "construction yarn medium cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -1352,7 +1404,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour medium avec rm: index "$index
+	echo "construction yarn medium cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1368,7 +1420,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour medium avec rm: index "$index
+	echo "construction yarn medium cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -1385,7 +1437,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais yarn install pour medium avec rm: index "$index
+	echo "construction yarn medium cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -1395,6 +1447,9 @@ do
 
 	index=$(($index+1))
 done
+
+rm -f yarn.lock
+rm -rf node_modules
 
 
 echo "Fin des installs"exit 0

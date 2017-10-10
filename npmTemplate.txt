@@ -13,7 +13,7 @@ index=1
 # node_modules	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour [fwk] avec cache clear et rm: index "$index
+	echo "construction npm [fwk] cache no - lockfile no - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -31,7 +31,7 @@ index=1
 # node_modules	X	
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour [fwk] : index "$index
+	echo "construction npm [fwk] cache yes - lockfile yes - node_modules yes - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	OUI"
@@ -46,7 +46,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour [fwk] avec rm: index "$index
+	echo "construction npm [fwk] cache yes - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
@@ -62,7 +62,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour [fwk] avec rm: index "$index
+	echo "construction npm [fwk] cache yes - lockfile no - node_modules no - occurs "$index
 	echo "cache 		OUI"
 	echo "lockfile  	NON"
 	echo "node_modules	NON"
@@ -79,7 +79,7 @@ index=1
 # node_modules		
 while [ "$index" != 6 ]
 do
-	echo "Je fais npm install pour [fwk] avec rm: index "$index
+	echo "construction npm [fwk] cache no - lockfile yes - node_modules no - occurs "$index
 	echo "cache 		NON"
 	echo "lockfile  	OUI"
 	echo "node_modules	NON"
